@@ -68,6 +68,8 @@ function(nums1, m, nums2, n) {
    return nums1;
 };
 
+// console.log(nums1)
+
 // SQL Query: 
 
 //3) Write a SQL query to display the order number followed by order date and the purchase amount for each order which will be delivered by the salesman who is holding the ID 5001.
