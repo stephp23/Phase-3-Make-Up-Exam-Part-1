@@ -23,6 +23,11 @@ function bookWordCount(book) {
   let book_words_count_results = {};
   let book_words_array = book_words_uppercase.split(' ')
 
+  // check for empty string/book
+  if (book_words_uppercase.length === 0) {
+    return {};
+  }
+
   for (let i = 0; i < book_words_array.length; i++) {
     let book_words = book_words_array[i];
     if (book_words_count_results[book_words] === undefined) {
@@ -36,12 +41,13 @@ function bookWordCount(book) {
   return book_words_count_results;
   
 
-  // check for empty string/book
-  if (book_words_uppercase.length === 0) {
-    return {};
-  }
+  // // check for empty string/book
+  // if (book_words_uppercase.length === 0) {
+  //   return {};
+  // }
 }
 
+// bookWordCount(“Is your favorite car brand BMW? Mine is Toyota.”)
 
 
 // 2) You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively. Merge nums1 and nums2 into a single array sorted in non-decreasing order. The final sorted array should not be returned by the function, but instead be stored inside the array nums1. 
